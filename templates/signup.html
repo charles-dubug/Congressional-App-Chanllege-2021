@@ -1,0 +1,80 @@
+{% extends "nav.html" %}
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="flex flex-row justify-center items-center">
+    <div class="flex flex-col w-1/2 justify-center  items-center px-10 py-10 shadow-md rounded"
+      style="background-color: white; min-width: 500px;">
+
+      <div class="flex flex-col justify-center items-center w-full max-w-lg">
+        <b>
+          <h1 class="text-bookmark-blue text-2xl md:text-3 lg:text-4xl text-center mb-4 font-body">Sign Up!</h1>
+        </b>
+        <p class="text-bookmark-grey text-lg text-center justify-center items-center font-body w-3/4 mb-10">Join our
+          cause to make sure our world stays safe and environmentally healthy.</p>
+        <p class="text-bookmark-grey text-lg text-center justify-center items-center font-body w-3/4 mb-10">Already have
+          an account? <a href="./login.html" style="color: blue;">Login</a></p>
+      </div>
+
+      <div class="w-full max-w-lg">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="/signup.html" method="POST">
+
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2"> Email</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="email" name="email" placeholder="Enter Email" id="email" required>
+          </div>
+
+
+          <div class="mb-4">
+            <label for="username" class="block text-gray-700 text-sm font-bold mb-2"> Username</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text" name="username" placeholder="Enter Name" id="username" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2"> Password</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="password" name="password" placeholder="Enter Password" id="password" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="cpassword" class="block text-gray-700 text-sm font-bold mb-2"> Confirm Password</label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="password" name="cpassword" placeholder="Confirm Password" id="cpassword" required>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit">
+              Sign Up
+            </button>
+          </div>
+
+          <p style="color: red;">{{data}}</p>
+        </form>
+
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>
+{% endblock %}

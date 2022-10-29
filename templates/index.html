@@ -1,0 +1,238 @@
+{% extends "nav.html" %}
+{% block main %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertible</title>
+    <link rel="stylesheet" href="../static/css/output.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> -->
+
+<body style="background-color: #F0FFCE;">
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="container flex flex-col-reverse lg:flex-row items-center mx-auto pb-16 pl-6">
+
+      <!-- Left Stuff -->
+      <div class="flex flex-1 flex-col items-center lg:items-start">
+        <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-body">
+          Helping through Trees
+        </h2>
+        <p class="text-bookmark-grey text-lg text-center lg:text-left mb-6 font-body">
+          A simple and clean application to help the environment and the trees. Join us and help with our mission to
+          make our world a greener place.
+        </p>
+        <div class="flex justify-center flex-wrap gap-6">
+          {% if not user %}
+          <a href="./signup.html"><button type="button"
+              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200">Get
+              Started</button>
+          </a>
+          {% else %}
+          <a href="./signup.html">
+            <button type="button"
+              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200">{{user}}</button>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+        <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../static/img/cleanup.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="relative" style="background-color:white">
+    <div class="flex flex-col justify-center items-center">
+
+      <div class="flex flex-col justify-center items-center mb-14">
+        <b>
+          <h1 class="text-bookmark-blue text-2xl md:text-3 lg:text-4xl text-center mt-10 mb-4 font-body">Learn more
+            about the Environment.</h1>
+        </b>
+        <p class="text-bookmark-grey text-lg text-center justify-center items-center w-2/3 font-body">Learn from videos,
+          save carbon emission from our app, and commit yourself to make the world a greener place.</p>
+      </div>
+
+      <div class="flex flex-col md:flex-row mb-10">
+        <iframe class="mb-10" width="520" height="300" src="https://www.youtube.com/embed/tvGTI3UfYHU">
+        </iframe>
+
+        <div class="flex flex-1 flex-col sm:ml-10 md:ml-24 max-w-md items-center justify-center">
+          <b>
+            <h1 class="text-l md:text-2 lg:text-xl mb-6 items-center font-body text-center pl-10 md:pl-0">Watch some
+              educational videos!</h1>
+          </b>
+          <p class="text-l font-body mb-4 text-center pl-10 md:pl-0">We believe it is important to empower people to
+            take a part in perserving their environment. Vertible is an application that is designed to help educate and
+            allow students to learn the importance of environmental protection and help with the maintaining
+            environmental health.</p>
+          <a href="./videos.html"><button type="button"
+              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-10 md:ml-0 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200">More
+              Videos!</button></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="relative mb-10">
+    <div class="flex flex-col justify-center items-center">
+
+      <div class="flex flex-col">
+        <b>
+          <h1 class="text-bookmark-blue text-2xl md:text-3 lg:text-4xl text-center mt-10 mb-4 font-body">Our Mission.
+          </h1>
+        </b>
+        <p class="text-xl font-body mb-4 text-center">"To provide people the information and utility they need to help
+          the environment."</p>
+
+      </div>
+      <!-- Cards -->
+      <div class="flex flex-col sm:flex-row">
+
+        <!-- Card 1 -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg mb-10 sm:mr-10" style="background-color: white;">
+          <img class="w-full" src="../static/img/globebubble.png" alt="Sunset in the mountains">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Help the Earth</div>
+            <p class="text-gray-700 text-base">
+              We are dedicated to make sure the earth is as safe and clean as possible. Join us to make sure that the
+              world is kept green, healthy, and environmentally sound.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#green</span>
+            <span
+              class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#savetheearth</span>
+            <span
+              class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#health</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg mb-10 mr-10" style="background-color: white;">
+          <img class="w-full" src="../static/img/treebubble.png" alt="Sunset in the mountains">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Help the Trees</div>
+            <p class="text-gray-700 text-base">
+              We provide a method for users to aid the environment by planting trees. Use our technology and your
+              dedication to plant more trees and help reduce greenhouse gases.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#trees</span>
+            <span
+              class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#greenery</span>
+            <span
+              class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#savethetrees</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg mb-10" style="background-color: white;">
+          <img class="w-full" src="../static/img/peoplebubble.png" alt="Sunset in the mountains">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Help Yourself</div>
+            <p class="text-gray-700 text-base">
+              We want to provide users with the best possible incentives and necessities for partaking in this venture.
+              You can get points that you can redeem by helping our planet!
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#motive</span>
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#awesome</span>
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#LOL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Slider -->
+  <section style="background-color: white;" class="mb-10">
+    <div class="flex flex-col justify-center items-center mb-10">
+      <b>
+        <h1 class="tik
+              ext-bookmark-blue text-2xl md:text-3 lg:text-4xl text-center mt-10 mb-4 font-body">Preserve our Natural
+          Beauties.</h1>
+      </b>
+      <p class="text-xl font-body mb-4 text-center">Help us do what we can to save the beauty in our environment.</p>
+    </div>
+    <div class="swiper w-3/4 h-1/2" style="max-width: 1000px;">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="../static/img/slidermountain.png" alt=""></div>
+        <div class="swiper-slide"><img src="../static/img/slidersunset.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../static/img/slidervalley.jpg" alt=""></div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev" style="color: red;"></div>
+      <div class="swiper-button-next" style="color: red;"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div>
+      <p style="color: white;">Easter Egg!</p>
+    </div>
+  </section>
+
+
+  <!-- Carbon Emission -->
+  <section>
+    <div class="flex flex-col justify-center items-center">
+      <b>
+        <h1 class="text-bookmark-blue text-2xl md:text-3 lg:text-4xl text-center mb-4 font-body">Help Us Reduce Carbon
+          Emission.</h1>
+      </b>
+      <p class="text-bookmark-grey text-lg text-center justify-center items-center w-2/3 font-body mb-10">Use our
+        application and help us reduce the amount of carbon emission in the air.</p>
+
+      <div class="flex flex-col-reverse md:flex-row">
+
+        <div class="flex flex-1 flex-col ml-10 md:ml-0 md:mr-24 max-w-md items-center">
+          <b>
+            <h1 class="text-l md:text-2 lg:text-xl mb-6 items-center font-body text-center md:pr-0">Learn to use our
+              application!</h1>
+          </b>
+          <p class=" text-l font-body mb-4 text-center md:pr-0">Take a look at our tutorials to how to use our
+            application to help limit carbon emission. It is imperative that we take a stand through technology to limit
+            our burden on our environment.</p>
+          <a href="./application.html"><button type="button"
+              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 mb-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200">Get
+              Started</button>
+          </a>
+        </div>
+        <iframe class="mb-10" width="520" height="300" src="https://www.youtube.com/embed/aKgmJiqoyXM">
+        </iframe>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  {% endblock %}

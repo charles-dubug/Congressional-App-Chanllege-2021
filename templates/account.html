@@ -1,0 +1,40 @@
+{% extends "nav.html" %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+</head>
+<body style="background-color: #F0FFCE;">
+    <div class="pt-8 flex flex-col justify-center items-center text-center">
+        <div style="width: 470px;">
+        <h1 class="text-5xl pb-8 font-bold">Your Account!</h1>
+        <p class="text-2xl pb-16">Know your stats and how many points you have so you can use them for our rewards!</p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-1 flex-col max-w-md rounded overflow-hidden shadow-lg mb-10 justify-start items-center px-10 py-10" style="background-color: white;">
+            <div class="font-bold text-xl mb-2 text-center mt-4">{{user}}</div>
+            <p class="text-gray-700 text-center">Your points:</p>
+            <p class="text-gray-700 text-center">
+                {{points}}
+            </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
+{% endblock %} 

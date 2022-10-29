@@ -1,0 +1,56 @@
+{% extends "nav.html" %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <div class="flex flex-row justify-center items-center">
+  <div class="flex flex-col w-1/2 justify-center  items-center px-10 py-10 shadow-md rounded" style="background-color: white; min-width: 500px;">
+
+    <div class="flex flex-col justify-center items-center w-full max-w-lg">
+      <b><h1 class="text-bookmark-blue text-2xl md:text-3 lg:text-4xl text-center mb-4 font-body">Contact Us!</h1></b>
+      <p class="text-bookmark-grey text-lg text-center justify-center items-center font-body w-3/4 mb-10">If you have any questions regarding any part of our application or website service, feel free to ask! Our goal is to provide a better and free way to help unify the world around preserving the environment.</p>
+      <p class="text-bookmark-grey text-lg text-center justify-center items-center font-body w-3/4 mb-10">If you are interested in joining our team, have any suggestions for our application, or want to learn more about how to help the environment, feel free to contact us!</p>
+
+    </div>
+    <div class="w-full max-w-lg">
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="/contact.html" method="POST">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2"> Name</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Enter Name" id="name" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2"> Email</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" placeholder="Enter Email" id="email" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+          <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="" name="message" placeholder="Enter a Message" id="message" required></textarea>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+
+{% endblock %}
