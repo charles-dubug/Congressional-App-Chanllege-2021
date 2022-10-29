@@ -1,0 +1,31 @@
+{
+  "name": "congressionalapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx tailwindcss -i ./static/css/styles.css -o ./static/css/output.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoteahu/congressionalapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timoteahu/congressionalapp/issues"
+  },
+  "homepage": "https://github.com/timoteahu/congressionalapp#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "firebase": "^9.6.10",
+    "flask": "^0.2.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "swiper": "^8.0.7"
+  }
+
+}
